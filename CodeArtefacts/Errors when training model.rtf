@@ -1,0 +1,148 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2709
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fmodern\fcharset0 Courier;\f1\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red203\green203\blue203;\red252\green97\blue117;\red84\green164\blue243;
+\red136\green172\blue206;\red112\green158\blue255;\red73\green176\blue119;}
+{\*\expandedcolortbl;;\cssrgb\c83529\c83529\c83529;\cssrgb\c100000\c47843\c53333;\cssrgb\c39216\c70980\c96471;
+\cssrgb\c60000\c73333\c84314;\cssrgb\c50980\c69412\c100000;\cssrgb\c34118\c73333\c54118;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs28 \cf2 \expnd0\expndtw0\kerning0
+Epoch 1/4\
+\pard\pardeftab720\partightenfactor0
+\cf3 ---------------------------------------------------------------------------\cf2 \
+\cf3 ResourceExhaustedError\cf2                     Traceback (most recent call last)\
+\pard\pardeftab720\partightenfactor0
+\cf4 \ul \ulc4 <ipython-input-16-d5643c7528e2>\cf2 \ulnone  in \cf5 <cell line: 1>\cf6 ()\cf2 \
+\pard\pardeftab720\partightenfactor0
+\cf7 ----> 1\cf3  \cf2 model\cf6 .\cf2 fit\cf6 (\cf2 train_generator\cf6 ,\cf2  validation_data\cf6 =\cf2 valid_generator\cf6 ,\cf2  epochs\cf6 =\cf5 4\cf6 )\cf2 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf2 \
+\
+1 frames\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f0 \cf4 \ul /usr/local/lib/python3.10/dist-packages/tensorflow/python/eager/execute.py\cf2 \ulnone  in \cf5 quick_execute\cf6 (op_name, num_outputs, inputs, attrs, ctx, name)\cf2 \
+\pard\pardeftab720\partightenfactor0
+\cf7      50\cf2    \cf7 try\cf6 :\cf2 \
+\cf7      51\cf2      ctx\cf6 .\cf2 ensure_initialized\cf6 ()\cf2 \
+\cf7 ---> 52\cf3      tensors = pywrap_tfe.TFE_Py_Execute(ctx._handle, device_name, op_name,\
+\cf7      53\cf2                                          inputs, attrs, num_outputs)\
+\cf7      54\cf2    \cf7 except\cf2  core\cf6 .\cf2 _NotOkStatusException \cf7 as\cf2  e\cf6 :\cf2 \
+\
+\cf3 ResourceExhaustedError\cf2 : Graph execution error:\
+\
+Detected at node 'sequential/activation_1/Relu' defined at (most recent call last):\
+    File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main\
+      return _run_code(code, main_globals, None,\
+    File "/usr/lib/python3.10/runpy.py", line 86, in _run_code\
+      exec(code, run_globals)\
+    File "/usr/local/lib/python3.10/dist-packages/ipykernel_launcher.py", line 16, in <module>\
+      app.launch_new_instance()\
+    File "/usr/local/lib/python3.10/dist-packages/traitlets/config/application.py", line 992, in launch_instance\
+      app.start()\
+    File "/usr/local/lib/python3.10/dist-packages/ipykernel/kernelapp.py", line 619, in start\
+      self.io_loop.start()\
+    File "/usr/local/lib/python3.10/dist-packages/tornado/platform/asyncio.py", line 195, in start\
+      self.asyncio_loop.run_forever()\
+    File "/usr/lib/python3.10/asyncio/base_events.py", line 603, in run_forever\
+      self._run_once()\
+    File "/usr/lib/python3.10/asyncio/base_events.py", line 1909, in _run_once\
+      handle._run()\
+    File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run\
+      self._context.run(self._callback, *self._args)\
+    File "/usr/local/lib/python3.10/dist-packages/tornado/ioloop.py", line 685, in <lambda>\
+      lambda f: self._run_callback(functools.partial(callback, future))\
+    File "/usr/local/lib/python3.10/dist-packages/tornado/ioloop.py", line 738, in _run_callback\
+      ret = callback()\
+    File "/usr/local/lib/python3.10/dist-packages/tornado/gen.py", line 825, in inner\
+      self.ctx_run(self.run)\
+    File "/usr/local/lib/python3.10/dist-packages/tornado/gen.py", line 786, in run\
+      yielded = self.gen.send(value)\
+    File "/usr/local/lib/python3.10/dist-packages/ipykernel/kernelbase.py", line 377, in dispatch_queue\
+      yield self.process_one()\
+    File "/usr/local/lib/python3.10/dist-packages/tornado/gen.py", line 250, in wrapper\
+      runner = Runner(ctx_run, result, future, yielded)\
+    File "/usr/local/lib/python3.10/dist-packages/tornado/gen.py", line 748, in __init__\
+      self.ctx_run(self.run)\
+    File "/usr/local/lib/python3.10/dist-packages/tornado/gen.py", line 786, in run\
+      yielded = self.gen.send(value)\
+    File "/usr/local/lib/python3.10/dist-packages/ipykernel/kernelbase.py", line 361, in process_one\
+      yield gen.maybe_future(dispatch(*args))\
+    File "/usr/local/lib/python3.10/dist-packages/tornado/gen.py", line 234, in wrapper\
+      yielded = ctx_run(next, result)\
+    File "/usr/local/lib/python3.10/dist-packages/ipykernel/kernelbase.py", line 261, in dispatch_shell\
+      yield gen.maybe_future(handler(stream, idents, msg))\
+    File "/usr/local/lib/python3.10/dist-packages/tornado/gen.py", line 234, in wrapper\
+      yielded = ctx_run(next, result)\
+    File "/usr/local/lib/python3.10/dist-packages/ipykernel/kernelbase.py", line 539, in execute_request\
+      self.do_execute(\
+    File "/usr/local/lib/python3.10/dist-packages/tornado/gen.py", line 234, in wrapper\
+      yielded = ctx_run(next, result)\
+    File "/usr/local/lib/python3.10/dist-packages/ipykernel/ipkernel.py", line 302, in do_execute\
+      res = shell.run_cell(code, store_history=store_history, silent=silent)\
+    File "/usr/local/lib/python3.10/dist-packages/ipykernel/zmqshell.py", line 539, in run_cell\
+      return super(ZMQInteractiveShell, self).run_cell(*args, **kwargs)\
+    File "/usr/local/lib/python3.10/dist-packages/IPython/core/interactiveshell.py", line 2975, in run_cell\
+      result = self._run_cell(\
+    File "/usr/local/lib/python3.10/dist-packages/IPython/core/interactiveshell.py", line 3030, in _run_cell\
+      return runner(coro)\
+    File "/usr/local/lib/python3.10/dist-packages/IPython/core/async_helpers.py", line 78, in _pseudo_sync_runner\
+      coro.send(None)\
+    File "/usr/local/lib/python3.10/dist-packages/IPython/core/interactiveshell.py", line 3257, in run_cell_async\
+      has_raised = await self.run_ast_nodes(code_ast.body, cell_name,\
+    File "/usr/local/lib/python3.10/dist-packages/IPython/core/interactiveshell.py", line 3473, in run_ast_nodes\
+      if (await self.run_code(code, result,  async_=asy)):\
+    File "/usr/local/lib/python3.10/dist-packages/IPython/core/interactiveshell.py", line 3553, in run_code\
+      exec(code_obj, self.user_global_ns, self.user_ns)\
+    File "<ipython-input-16-d5643c7528e2>", line 1, in <cell line: 1>\
+      model.fit(train_generator, validation_data=valid_generator, epochs=4)\
+    File "/usr/local/lib/python3.10/dist-packages/keras/utils/traceback_utils.py", line 65, in error_handler\
+      return fn(*args, **kwargs)\
+    File "/usr/local/lib/python3.10/dist-packages/keras/engine/training.py", line 1685, in fit\
+      tmp_logs = self.train_function(iterator)\
+    File "/usr/local/lib/python3.10/dist-packages/keras/engine/training.py", line 1284, in train_function\
+      return step_function(self, iterator)\
+    File "/usr/local/lib/python3.10/dist-packages/keras/engine/training.py", line 1268, in step_function\
+      outputs = model.distribute_strategy.run(run_step, args=(data,))\
+    File "/usr/local/lib/python3.10/dist-packages/keras/engine/training.py", line 1249, in run_step\
+      outputs = model.train_step(data)\
+    File "/usr/local/lib/python3.10/dist-packages/keras/engine/training.py", line 1050, in train_step\
+      y_pred = self(x, training=True)\
+    File "/usr/local/lib/python3.10/dist-packages/keras/utils/traceback_utils.py", line 65, in error_handler\
+      return fn(*args, **kwargs)\
+    File "/usr/local/lib/python3.10/dist-packages/keras/engine/training.py", line 558, in __call__\
+      return super().__call__(*args, **kwargs)\
+    File "/usr/local/lib/python3.10/dist-packages/keras/utils/traceback_utils.py", line 65, in error_handler\
+      return fn(*args, **kwargs)\
+    File "/usr/local/lib/python3.10/dist-packages/keras/engine/base_layer.py", line 1145, in __call__\
+      outputs = call_fn(inputs, *args, **kwargs)\
+    File "/usr/local/lib/python3.10/dist-packages/keras/utils/traceback_utils.py", line 96, in error_handler\
+      return fn(*args, **kwargs)\
+    File "/usr/local/lib/python3.10/dist-packages/keras/engine/sequential.py", line 412, in call\
+      return super().call(inputs, training=training, mask=mask)\
+    File "/usr/local/lib/python3.10/dist-packages/keras/engine/functional.py", line 512, in call\
+      return self._run_internal_graph(inputs, training=training, mask=mask)\
+    File "/usr/local/lib/python3.10/dist-packages/keras/engine/functional.py", line 669, in _run_internal_graph\
+      outputs = node.layer(*args, **kwargs)\
+    File "/usr/local/lib/python3.10/dist-packages/keras/utils/traceback_utils.py", line 65, in error_handler\
+      return fn(*args, **kwargs)\
+    File "/usr/local/lib/python3.10/dist-packages/keras/engine/base_layer.py", line 1145, in __call__\
+      outputs = call_fn(inputs, *args, **kwargs)\
+    File "/usr/local/lib/python3.10/dist-packages/keras/utils/traceback_utils.py", line 96, in error_handler\
+      return fn(*args, **kwargs)\
+    File "/usr/local/lib/python3.10/dist-packages/keras/layers/core/activation.py", line 59, in call\
+      return self.activation(inputs)\
+    File "/usr/local/lib/python3.10/dist-packages/keras/activations.py", line 317, in relu\
+      return backend.relu(\
+    File "/usr/local/lib/python3.10/dist-packages/keras/backend.py", line 5396, in relu\
+      x = tf.nn.relu(x)\
+Node: 'sequential/activation_1/Relu'\
+OOM when allocating tensor with shape[373,32,254,254] and type float on /job:localhost/replica:0/task:0/device:GPU:0 by allocator GPU_0_bfc\
+	 [[\{\{node sequential/activation_1/Relu\}\}]]\
+Hint: If you want to see a list of allocated tensors when OOM happens, add report_tensor_allocations_upon_oom to RunOptions for current allocation info. This isn't available when running in Eager mode.\
+ [Op:__inference_train_function_1656]}
